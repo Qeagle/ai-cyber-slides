@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #ecfeff;
+  --color-primary-100: #cffafe;
+  --color-primary-200: #a5f3fc;
+  --color-primary-300: #67e8f9;
+  --color-primary-400: #22d3ee;
+  --color-primary-500: #06b6d4;
+  --color-primary-600: #0891b2;
+  --color-primary-700: #0e7490;
+  --color-primary-800: #155e75;
+  --color-primary-900: #164e63;
+  --color-primary-950: #083344;
+
+  --color-bg-primary: #020617;
+  --color-bg-secondary: #0F172A;
+  --color-bg-tertiary: #1E293B;
+  
+  --color-txt-primary: #F8FAFC;
+  --color-txt-secondary: #94A3B8;
+  --color-txt-muted: #64748B;
+}
+
+/* Global styles for presentation mode */
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Cyber Dark Theme Base */
+  color-scheme: dark;
+  background-color: #020617; /* bg-primary */
+  color: #F8FAFC; /* txt-primary */
+}
+
+/* Base Body Setup */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #020617;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide scrollbars globally */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection styling - Cyan */
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: white;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans tracking-tight;
+}
+
+/* Responsive Scaling for Projectors */
+/* We want everything to look huge on big screens */
+@media (min-width: 1920px) {
+  html {
+    font-size: 20px; /* Scale up base font size */
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px; /* Scale down for laptop dev */
+  }
+}
+

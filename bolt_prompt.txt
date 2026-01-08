@@ -1,0 +1,33 @@
+You are building a React + TypeScript animated full-screen presentation app (Vite + Tailwind + Framer Motion). 
+Purpose: 25-minute interactive masterclass for college grads at IMAGINE (Tamil Nadu govt program): “Cyber Security in the AI World”.
+Audience is mixed streams; presenter will do hands-up polls, no live polling tools. Presenter narrates stories (no screenshots/videos).
+Must end with a QR CTA slide (K7 Academy).
+
+HARD REQUIREMENTS:
+- SPA with main.tsx + App.tsx (no single static HTML).
+- Full viewport, no scrollbars, recording-friendly 16:9.
+- No slide numbers, no dates/timestamps anywhere.
+- Data-driven slides via config objects + SlideRegistry mapping slide.type to template components.
+- Keyboard navigation: Right/Enter/Space = next; Left = prev; Esc opens optional menu.
+- Optional Sidebar toggle from appConfig.ts (default off).
+- Central theme tokens (themeTokens.ts) and Tailwind config wired to it.
+- Smooth, subtle Framer Motion transitions and element reveals.
+
+LANGUAGE MODE:
+- Global langMode: AUTO | EN | MIX (Tanglish).
+- Slide 1 asks audience language preference.
+- Presenter presses 1 (EN) or 2 (MIX) to set langMode globally.
+
+CHAPTERS + SLIDES (22 total):
+1–6 Intro/Pulse: title + 3 hands-polls + room snapshot + “Who am I”.
+7–12 Why now: machine-speed attacks, bank fraud story (generic), fraud pipeline diagram, AI helps defenders & attackers split, deepfake story (generic), recap + 2 common questions.
+13–20 Two tracks: AI for Cyber use cases + simple anomaly model diagram; prompt injection; RAG data leakage; model/API risks; “3 Gates” framework; recap quiz.
+21–22 Close: 90-day roadmap (Learn/Build/Prove) + QR CTA + Q&A prompt.
+
+IMPLEMENTATION:
+Create folder structure exactly as described in instruction.md. 
+Implement reusable slide templates: TitleSlide, HandsPollSlide, QuestionSlide, StorySlide, SplitSlide, DiagramSlide, ChecklistSlide, FrameworkSlide, RecapQuizSlide, RoadmapSlide, QrCtaSlide.
+Each slide object supports multilingual title/subtitle/bullets/ask, plus speakerNotes (never rendered).
+Use consistent layout components SlideShell/SlideBody and theme tokens.
+
+Now generate the complete codebase with all files, types, sample content in slides.cyber25.ts, and working navigation/animations.
