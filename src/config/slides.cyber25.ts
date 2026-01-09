@@ -38,12 +38,12 @@ export const slides: Slide[] = [
     audiencePrompt: 'Hands up for each group.',
   },
 
-  // Slide 4 -- ROOM_PULSE (Which AI do you use?)
+  // Slide 4 -- ROOM_PULSE (Which LLM do you use)
   {
     id: '4',
     type: 'ROOM_PULSE',
     title: 'AI Tools',
-    headline: 'Which AI do you use?',
+    headline: 'Which LLM do you use',
     options: [
       { label: 'GPT', icon: 'gpt' },
       { label: 'Claude', icon: 'claude' },
@@ -60,7 +60,7 @@ export const slides: Slide[] = [
     id: '5',
     type: 'SIMPLE_CARDS',
     title: 'AI Usage',
-    headline: 'How do you use AI?',
+    headline: 'What do you use AI for?',
     cards: [
       { label: 'Solve problems', icon: 'brain' },
       { label: 'Build projects', icon: 'code' },
@@ -163,13 +163,14 @@ export const slides: Slide[] = [
     type: 'RULE_CHIPS',
     title: 'Deepfake Defense',
     headline: 'Looks real. Sounds real.',
-    chips: ['PAUSE - Don\'t panic', 'VERIFY - Out of band', 'LIMIT - Least Privilege'],
+    chips: ['PAUSE - Don\'t panic', 'VERIFY - Out of band', 'LIMIT - Least Privilege', 'AI DEFENSE - Real-time Analysis'],
     examples: [
       'CEO calls asking for urgent wire transfer? Take 5 minutes before acting.',
       'Call them back on a known number. Use Slack/Teams to confirm.',
-      'No single person should approve $25M. Require multi-party sign-off.'
+      'No single person should approve $25M. Require multi-party sign-off.',
+      'AI Agents detect spectral artifacts and voiceprints that humans miss.'
     ],
-    speakerNotes: 'Story: The CEO voice call scam. The defense is human behavior, not just tech.',
+    speakerNotes: 'Story: The CEO voice call scam. The defense is human behavior, not just tech. AI agents can also be built as a layer of defense—analyzing audio spectral patterns and video artifacts in real-time that humans cannot perceive.',
   },
 
   // Slide 13 -- SIMPLE_CARDS (Phishing on Autopilot)
@@ -196,13 +197,14 @@ export const slides: Slide[] = [
     type: 'RULE_CHIPS',
     title: 'Phishing Defense',
     headline: 'Think before you click.',
-    chips: ['HOVER - Check the link', 'VERIFY - Contact sender directly', 'REPORT - Flag suspicious emails'],
+    chips: ['HOVER - Check the link', 'VERIFY - Contact sender directly', 'REPORT - Flag suspicious emails', 'AI AGENT - Auto-Analysis'],
     examples: [
       'Mouse over links before clicking. Real URL ≠ displayed text? Red flag.',
       'Got an urgent email from IT? Call or message them on a known channel.',
-      'One reported phish can stop hundreds. Use your company\'s report button.'
+      'One reported phish can stop hundreds. Use your company\'s report button.',
+      'AI agents analyze email headers, tone, and sender reputation instantly.'
     ],
-    speakerNotes: 'AI phishing looks perfect but behavior still catches it. Hover, verify, report. Make it a habit.',
+    speakerNotes: 'AI phishing looks perfect but behavior still catches it. Hover, verify, report. Also, AI agents can serve as a first line of defense, analyzing thousands of email attributes in milliseconds to flag deep-fake phishing.',
   },
 
   // Slide 16 -- PIPELINE_FLOW (Defense pipeline)
@@ -220,27 +222,10 @@ export const slides: Slide[] = [
     speakerNotes: 'Data comes in. We score it. We decide. All in milliseconds.',
   },
 
-  // Slide 17 -- SPLIT_CARDS (AI helps both)
+  
+  // Slide 16 -- RECAP_COUNT (Checkpoint)
   {
     id: '16',
-    type: 'SPLIT_CARDS',
-    title: 'Same AI, Two Sides',
-    headline: 'The AI Arms Race',
-    left: {
-      title: 'Defenders',
-      items: ['Detect faster', 'Analyst Copilot', 'Pattern matching']
-    },
-    right: {
-      title: 'Attackers',
-      items: ['Phishing scale', 'Deepfakes', 'Auto-exploits']
-    },
-    speakerNotes: 'We use AI to find bad guys. Bad guys use AI to look like good guys.',
-    audiencePrompt: 'Who is winning right now?',
-  },
-
-  // Slide 18 -- RECAP_COUNT (Checkpoint)
-  {
-    id: '17',
     type: 'RECAP_COUNT',
     title: 'Recap Checkpoint',
     headline: '3 Key Takeaways',
@@ -249,9 +234,11 @@ export const slides: Slide[] = [
     speakerNotes: 'If you remember nothing else from part 1: Speed kills.',
     audiencePrompt: 'Which one surprised you?',
   },
+  
+
   // Slide 15 -- AI_MENTAL_MODEL (Brain, Memory, Hands)
   {
-    id: '18',
+    id: '17',
     type: 'AI_MENTAL_MODEL',
     title: 'How To Think About AI Agent',
     headline: 'Brain, Memory, Hands',
@@ -278,29 +265,13 @@ export const slides: Slide[] = [
     speakerNotes: 'Simple mental model: AI has memory (RAG/data), brain (the LLM), and hands (agents/tools). Attackers can target any of these three.',
   },
 
-  // Slide 19 -- SPLIT_CARDS (Two tracks framing)
-  {
-    id: '19',
-    type: 'SPLIT_CARDS',
-    title: 'Two Tracks',
-    headline: 'Choose Your Path',
-    left: {
-      title: 'AI for Cyber',
-      items: ['Better detection', 'Automated response', 'Smarter tools']
-    },
-    right: {
-      title: 'Cyber for AI',
-      items: ['Securing models', 'Preventing leaks', 'Safe guarding']
-    },
-    speakerNotes: 'Track 1 is using AI as a shield. Track 2 is protecting the AI brain itself.',
-    audiencePrompt: 'Which track sounds more interesting?',
-  },
+  
 
   // Slide 20 -- CHART (AI Gold Rush - Market Size)
   {
-    id: '20',
+    id: '18',
     type: 'CHART',
-    title: 'AI Gold Rush: How Big Is This Wave?',
+    title: 'AI Rush: How Big Is This Wave?',
     subtitle: 'Generative AI market growth trajectory',
     chartType: 'area',
     series: [
@@ -335,6 +306,42 @@ export const slides: Slide[] = [
       'McKinsey (2023–2025)',
     ],
     speakerNotes: 'We are on the steep part of the curve. Trillions of dollars of value waiting to be unlocked – cybersecurity is critical to protect it.',
+  },
+
+  // Slide 17 -- SPLIT_CARDS (AI helps both)
+  {
+    id: '19',
+    type: 'SPLIT_CARDS',
+    title: 'Same AI, Two Sides',
+    headline: 'The AI Arms Race',
+    left: {
+      title: 'Defenders',
+      items: ['Detect faster', 'Analyst Copilot', 'Pattern matching']
+    },
+    right: {
+      title: 'Attackers',
+      items: ['Phishing scale', 'Deepfakes', 'Auto-exploits']
+    },
+    speakerNotes: 'We use AI to find bad guys. Bad guys use AI to look like good guys.',
+    audiencePrompt: 'Who is winning right now?',
+  },
+
+  // Slide 19 -- SPLIT_CARDS (Two tracks framing)
+  {
+    id: '20',
+    type: 'SPLIT_CARDS',
+    title: 'Two Tracks',
+    headline: 'Choose Your Path',
+    left: {
+      title: 'AI for Cyber',
+      items: ['Better detection', 'Automated response', 'Smarter tools']
+    },
+    right: {
+      title: 'Cyber for AI',
+      items: ['Securing models', 'Preventing leaks', 'Safe guarding']
+    },
+    speakerNotes: 'Track 1 is using AI as a shield. Track 2 is protecting the AI brain itself.',
+    audiencePrompt: 'Which track sounds more interesting?',
   },
 
   // Slide 21 -- ICON_GRID (AI for Cyber use cases)
